@@ -1,0 +1,21 @@
+package pages
+
+import (
+	"github.com/axzilla/templui/component/button"
+	"github.com/ed-henrique/somos-dev-br/internal/ui/layouts"
+	"github.com/ed-henrique/somos-dev-br/internal/models"
+)
+
+templ Posts(posts []models.Post) {
+	@layouts.BaseLayout() {
+		for _, post := range posts {
+			@button.Button(button.Props{
+				Variant: button.VariantOutline,
+				Href:    "https://google.com",
+				Target:  "_blank",
+			}) {
+				{ post.Content.String }
+			}
+		}
+	}
+}

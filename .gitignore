@@ -1,0 +1,8 @@
+# Temporary files
+tmp/
+
+# Environment variables
+.env
+
+# Development database
+db.sqlite3
